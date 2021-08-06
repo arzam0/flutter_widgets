@@ -6,9 +6,14 @@ class CustomTextField extends StatelessWidget {
   final TextEditingController controller;
   final String hintText;
   final bool isObsCure;
+  final Color fillColor
 
-  const CustomTextField({Key? key,required this.controller, required this.hintText,
-  required this.isObsCure
+  const CustomTextField({Key? key,required 
+    this.controller,
+    required this.hintText,
+   required this.fillColor, 
+    this.isObsCure = false,
+       
   }) : super(key: key);
 
   @override
@@ -37,7 +42,7 @@ class CustomTextField extends StatelessWidget {
           filled: true,
           hintStyle: TextStyle(color: Colors.white),
           hintText: hintText,
-          fillColor: purpleLightColor),
+          fillColor: fillColor),
     );
   }
 }
